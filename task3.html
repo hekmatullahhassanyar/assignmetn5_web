@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - Task 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="task3.js" defer></script>
+</head>
+<body>
+    <main class="form-container">
+        <h1>Ticket Builder</h1>
+        <div id="error-summary" class="error-summary hidden"></div>
+        <form id="ticket-form" novalidate>
+            <div class="form-group">
+                <label for="event-name">Event Name:</label>
+                <select id="event-name" required>
+                    <option value="">--Select Event--</option>
+                    <option value="Concert">Concert</option>
+                    <option value="Theater">Theater</option>
+                    <option value="Festival">Festival</option>
+                </select>
+                <small class="error-message" id="event-name-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="event-date">Date:</label>
+                <input type="date" id="event-date" required>
+                <small class="error-message" id="event-date-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" required>
+                    <option value="">--Select Type--</option>
+                    <option value="Standard">Standard (50 seats left)</option>
+                    <option value="VIP">VIP (10 seats left)</option>
+                </select>
+                <small class="error-message" id="ticket-type-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+                <small class="error-message" id="quantity-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="buyer-name">Your Name:</label>
+                <input type="text" id="buyer-name" required minlength="3">
+                <small class="error-message" id="buyer-name-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="buyer-email">Email:</label>
+                <input type="email" id="buyer-email" required>
+                <small class="error-message" id="buyer-email-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="promo-code">Promo Code (Optional):</label>
+                <input type="text" id="promo-code">
+                <small class="error-message" id="promo-code-error"></small>
+            </div>
+
+            <button type="submit" id="submit-btn">Book Tickets</button>
+        </form>
+
+        <section class="preview-section">
+            <h2>Live Ticket Preview</h2>
+            <div id="ticket-preview" class="ticket-preview">
+                <p><strong>Event:</strong> <span id="prev-event">-</span></p>
+                <p><strong>Date:</strong> <span id="prev-date">-</span></p>
+                <p><strong>Type:</strong> <span id="prev-type">-</span></p>
+                <p><strong>Quantity:</strong> <span id="prev-qty">0</span></p>
+                <p><strong>Name:</strong> <span id="prev-name">-</span></p>
+                <p><strong>Total:</strong> $<span id="prev-total">0</span></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

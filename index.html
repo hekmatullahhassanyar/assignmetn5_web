@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="task1.js" defer></script>
+</head>
+<body>
+    <main class="game-container">
+        <h1>Turn-Based Battle</h1>
+        <div class="stats-board">
+            <div class="character-card">
+                <h2>Hero</h2>
+                <div class="hp-bar-container">
+                    <div id="hero-hp-bar" class="hp-bar"></div>
+                </div>
+                <p>HP: <span id="hero-hp">100</span>/100</p>
+                <p>Heals left: <span id="heal-count">3</span></p>
+            </div>
+            <div class="character-card">
+                <h2>Enemy</h2>
+                <div class="hp-bar-container">
+                    <div id="enemy-hp-bar" class="hp-bar"></div>
+                </div>
+                <p>HP: <span id="enemy-hp">100</span>/100</p>
+            </div>
+        </div>
+        <div id="message-box" class="message-box">Choose your action!</div>
+        <div class="controls">
+            <button id="attack-btn">Attack</button>
+            <button id="defend-btn">Defend</button>
+            <button id="heal-btn">Heal</button>
+            <button id="restart-btn" class="hidden">Restart Game</button>
+        </div>
+        <div class="log-section">
+            <h3>Action Log</h3>
+            <ul id="action-log"></ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="task2.js" defer></script>
+</head>
+<body>
+    <main class="seat-container">
+        <h1>Bus Seat Map</h1>
+        <div class="control-panel">
+            <button id="best-seats-btn">Find Best Seats</button>
+            <input type="text" id="search-input" placeholder="Filter by zone (e.g. VIP)...">
+        </div>
+        <div id="message-box" class="message-box">Select up to 6 seats.</div>
+        <div id="seat-grid" class="seat-grid"></div>
+        <div class="summary-section">
+            <p>Selected Seats: <span id="selected-count">0</span>/6</p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </div>
+    </main>
+</body>
+</html>
